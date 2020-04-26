@@ -1,15 +1,15 @@
 # Chapter 1. The Genes, They Are a-Changin’
 
-### Lecture 1: Introducing Perl 6
+### Lecture 1: Introducing Raku
 
 
-### Lecture 2: The Hardy-Weinberg Principle in Perl 6
+### Lecture 2: The Hardy-Weinberg Principle in Raku
 
 
 ### Lecture 3: Calculating the next generation
 
 
-### Lecture 4: Perl 6 Functions
+### Lecture 4: Raku Functions
 
 
 ### Lecture 5: Iteration
@@ -33,7 +33,7 @@
 
 ### Lecture 3: Control Flow
 
-### Lecture 4: Coin Tossing in Perl 6
+### Lecture 4: Coin Tossing in Raku
 
 
 ### Lecture 5: Control Flow continued
@@ -41,12 +41,12 @@
 ### Lecture 6: Genetic Drift in Theory
 
 
-### Lecture 7: Genetic Drift in Perl 6
+### Lecture 7: Genetic Drift in Raku
 
 ### Lecture 8: Visualizing Genetic Drift
 
 
-### Lecture 9: Perl 6 Arrays
+### Lecture 9: Raku Arrays
 
 
 ### Lecture 10: Two-dimensional Arrays
@@ -81,7 +81,7 @@
 ###   Lecture 2: Generating DNA sequences
 
 
-###   Lecture 3: Mutations in Perl 6
+###   Lecture 3: Mutations in Raku
 
 
  ###  Lecture 4: Finishing the mutation simulation
@@ -93,7 +93,7 @@
  ###  Lecture 6: Fixation
 
 
-###   Lecture 7: Genetic Variation in Perl 6
+###   Lecture 7: Genetic Variation in Raku
  
 
 ###    Conclusion
@@ -118,9 +118,9 @@
 ###   Lecture 1: Natural Selection
 ###   Lecture 2: Proving Hardy-Weinberg
 ###   Lecture 3: Direction, disruptive and balancing selection
-###   Lecture 4: Selection in Perl 6
+###   Lecture 4: Selection in Raku
 ###   Lecture 5: While loops
-###   Lecture 6: Disruptive Selection in Perl 6
+###   Lecture 6: Disruptive Selection in Raku
 ###   Lecture 7: Co-evolution
 ###   Lecture 8: The Matching Alleles model
 ###   Lecture 9: Host-parasite co-evolution
