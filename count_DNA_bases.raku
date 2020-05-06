@@ -48,9 +48,20 @@ sub count_bases() {
   #select the sequence we want to look at from the hash
   my $carsonella_ruddi = %FASTA{'NC_008512.1 Candidatus Carsonella ruddii PV DNA, complete genome'};
   #counts and prints the bases in the genome
-  say $carsonella_ruddi.comb.Bag.hash
+  $carsonella_ruddi.comb.Bag.hash
 }
 
 # Call the function 
 
-count_bases()
+say count_bases()
+# Output will be 
+# {A => 66734, C => 13501, G => 12946, T => 66481}
+
+put count_bases()
+
+# Output will be
+
+# A   66734
+# C   13501
+# G   12946
+# T   66481
