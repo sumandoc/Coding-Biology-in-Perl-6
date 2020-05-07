@@ -53,7 +53,7 @@ sub count_bases() {
 
 # Call the function 
 
-say count_bases()
+say count_bases();
 # Output will be 
 # {A => 66734, C => 13501, G => 12946, T => 66481}
 
