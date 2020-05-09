@@ -65,3 +65,8 @@ put count_bases()
 # C   13501
 # G   12946
 # T   66481
+
+
+# Time taken for running the script
+
+END say now - INIT now;
