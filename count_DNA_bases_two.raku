@@ -66,3 +66,6 @@ say %counter
 
 # Count of each base
 count_bases($carsonella_ruddi,20000);
+# Time taken for running the script
+
+END say now - INIT now;
