@@ -19,8 +19,7 @@ put print_sequence_length("ATTTCCGCG");
 #                   NEXT
 #******************************************************
 
-# function takes in a filepath then opens & parses the
-# fasta file returning a hash
+# Function to open and parse file
 
 sub open_and_parse_fasta($filepath) {
     my @lines = $filepath.IO.lines;
@@ -39,26 +38,25 @@ sub open_and_parse_fasta($filepath) {
 }
 
 
+# Function to count base (nucleotides) occurence and print results
+# Whenever you want to count things in a collection, the rule of thumb is to use the Bag structure
 
-# function to count base occurence and print results
-# whenever you want to count things in a collection, the rule of thumb is to use the Bag structure
-
-sub count_bases() {
-  #run our open FASTA function and set returned FASTA_dict to FASTA variable
-  my %FASTA = open_and_parse_fasta("GCF_000010365.1_ASM1036v1_genomic.fna");
-  #select the sequence we want to look at from the hash
-  my $carsonella_ruddi = %FASTA{'NC_008512.1 Candidatus Carsonella ruddii PV DNA, complete genome'};
-  #counts and prints the bases in the genome
+sub count_bases($file, $description) {
+  # run our open_and_parse_fasta function and return a FASTA_hash
+  my %FASTA = open_and_parse_fasta($file);
+  # select the description of the sequence we want to look at from the FASTA_hash
+  my $carsonella_ruddi = %FASTA{$description};
+  # counts and prints the bases in the genome
   $carsonella_ruddi.comb.Bag.hash
 }
 
 # Call the function 
+say count_bases("GCF_000010365.1_ASM1036v1_genomic.fasta", "NC_008512.1 Candidatus Carsonella ruddii PV DNA, complete genome");
 
-say count_bases();
 # Output will be 
 # {A => 66734, C => 13501, G => 12946, T => 66481}
 
-put count_bases()
+put count_bases("GCF_000010365.1_ASM1036v1_genomic.fasta", "NC_008512.1 Candidatus Carsonella ruddii PV DNA, complete genome");
 
 # Output will be
 
