@@ -5,12 +5,13 @@
 
 # Raku handles all strings as UTF-8 by default
 
-sub print_sequence_length(){
-  my $seq = "AGTGTCCCTG"; #store DNA strand as a string in the variable seq
-  put chars($seq)
+# Given a string, this function prints the length of the string.
+
+sub print_sequence_length(Str $seq){
+  return chars($seq)
 }
 
-print_sequence_length();
+put print_sequence_length("ATTTCCGCG");
 
 
 
