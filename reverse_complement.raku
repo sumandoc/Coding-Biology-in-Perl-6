@@ -43,7 +43,6 @@ sub write_reverse_complement($input_file, $output_file, $description) {
   $fh.print: ">Reverse complement for $description\n";
   $fh.print: $rev_comp.comb(80).join("\n");
   $fh.close
-  #spurt $output_file, $rev_comp.comb(80).join("\n")
 }
 
 # call write_reverse_complement function with $input_file, $output_file, $description as arguments
