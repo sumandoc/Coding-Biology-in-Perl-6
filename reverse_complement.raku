@@ -39,10 +39,13 @@ sub write_reverse_complement($input_file, $output_file, $description) {
   # find reverse complement and store in a variable
   my $rev_comp = ($carsonella_ruddi ~~ tr/ATCG/TAGC/).flip;
   # write each line of 80 characters as recommended https://zhanglab.ccmb.med.umich.edu/FASTA/
-  spurt $output_file, $rev_comp.comb(80).join("\n")
+  my $fh = $output_file.IO.open: :w;
+  $fh.print: ">Reverse complement for $description\n";
+  $fh.print: $rev_comp.comb(80).join("\n");
+  $fh.close
+  #spurt $output_file, $rev_comp.comb(80).join("\n")
 }
 
 # call write_reverse_complement function with $input_file, $output_file, $description as arguments
 write_reverse_complement("GCF_000010365.1_ASM1036v1_genomic.fasta","reverse_complement_GCF_000010365.1_ASM1036v1_genomic.fasta", "NC_008512.1 Candidatus Carsonella ruddii PV DNA, complete genome");
-
 
