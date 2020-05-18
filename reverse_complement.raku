@@ -38,9 +38,10 @@ sub write_reverse_complement($input_file, $output_file, $description) {
   my $carsonella_ruddi = %FASTA{$description};
   # find reverse complement and store in a variable
   my $rev_comp = ($carsonella_ruddi ~~ tr/ATCG/TAGC/).flip;
-  # write each line of 80 characters as recommended https://zhanglab.ccmb.med.umich.edu/FASTA/
+  # open file in writing mode
   my $fh = $output_file.IO.open: :w;
   $fh.print: ">Reverse complement for $description\n";
+  # write each line of 80 characters as recommended https://zhanglab.ccmb.med.umich.edu/FASTA/
   $fh.print: $rev_comp.comb(80).join("\n");
   $fh.close
 }
